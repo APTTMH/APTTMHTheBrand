@@ -1,13 +1,14 @@
 //
-//  ContentView.swift
-//  uu
+//  TestView.swift
+//  AP
 //
-//  Created by Kelly Brown on 12/12/22.
+//  Created by Kelly Brown on 12/15/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct TestView: View {
+    //let verses = ["1","2"]
     var body: some View {
         NavigationView{
             ScrollView {
@@ -46,7 +47,7 @@ struct ContentView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .blendMode(.difference)
                                     .mask { RoundedRectangle(cornerRadius: 24, style: .continuous) }
-                            }
+                            } 
                             Section{
                                 NavigationLink(destination :JewelryView())
                                 {
@@ -57,7 +58,7 @@ struct ContentView: View {
                                         .mask { RoundedRectangle(cornerRadius: 50, style: .continuous) }
                                 }
                                 Section{
-                                    NavigationLink(destination :ScripturesView())
+                                    NavigationLink(destination: ScripturesView())
                                     {
                                         Image("scriptures")
                                             .renderingMode(.original)
@@ -65,7 +66,7 @@ struct ContentView: View {
                                             .aspectRatio(contentMode: .fit)
                                             .mask { RoundedRectangle(cornerRadius: 14, style: .continuous) }
                                     }
-                                   
+                                    
                                 }
                                 .frame(maxWidth: .infinity)
                                 .clipped()
@@ -87,14 +88,11 @@ struct ContentView: View {
             }
         }
     }
-        struct TestView_Previews: PreviewProvider {
-            static var previews: some View {
-                TestView()
-            }
-        }
-        
-        
-        
-        
-        
+}
+struct TestView_Previews: PreviewProvider {
+    static var previews: some View {
+        TestView()
     }
+}
+
+
